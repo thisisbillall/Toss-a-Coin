@@ -1,0 +1,38 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+#container{
+
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+}
+#img    {
+
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 45px;
+    top: 15px;
+}
+button{
+
+    top: 70px;
+    position: relative;
+   width: 100px;
+   height: 50px;
+   font-size: larger;
+   font-weight: bolder;
+   color: white;
+   background-color: #5cb85c;
+}
+#status{
+
+    position: relative;
+    top: 30px;
+    font-size: 40px;
+    font-weight: bold;
+}

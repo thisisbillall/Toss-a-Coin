@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toss the Coin</title>
+</head><br><br>
+<body>
+   
+    <div id="container">
+        <img id="img" src="head.png" id="coin" alt="head">
+        <center><i id="status">its Heads</i></center>
+        <center><button id="button" onclick="toss()">Toss</button></center>
+    </div>
+    
+    <script>
+
+        var button= document.getElementById("button");
+        var img= document.getElementById("img");
+        var counter=0;
+        var animation;
+  
+        function animate()
+        {
+
+            var random =Math.floor(Math.random()*2);
+            console.log(random);
+            if(random==1)
+            {
+                img.src="tail.png";
+                var status= document.getElementById("status").innerHTML="its Tails";
+            }
+            else{
+                img.src="head.png";
+                var status= document.getElementById("status").innerHTML="its Heads";
+            }
+            
+            counter++;
+            console.log(counter);
+            if(counter>=300)
+            {
+                clearInterval(animation);
+                counter=0;
+            }
+        }
+
+
+
+        function toss(){
+            animation =setInterval(animate,1);
+            var random =Math.floor(Math.random()*2);
+            console.log(random);
+            if(random==1)
+            {
+                img.src="tail.png";
+                var status= document.getElementById("status").innerHTML="its Tails";
+            }
+            else{
+                img.src="head.png";
+                var status= document.getElementById("status").innerHTML="its Heads";
+            }
+            
+       }
+    </script>
+</body>
+</html>
